@@ -4,22 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 13:Rowspan an Colspan(Timetale)</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #000;
+            padding: 10px 14px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <table border="n">
-        <caption><b>Weekly Timetable</b></caption>
-    <tr>
-        <th>Day</th>
-        <th>9:00 - 10:00</th>
-        <th>10:00 - 11:00</th>
-        <th>11:00 - 12:00</th>
-    </tr> 
-<tr>
-    <td>Mon</td>
-    <td>Maths</td>
-    <td>HTML</td>
-    <td colspan="2" style="text-align: center;">Web Lab</td>
-</tr>
-<tr>
-</body>
+     <table>
+        <caption><strong>Weekly Timetable</strong></caption>
+
+        <tr>
+            <th>Day</th>
+            <th>9-10</th>
+            <th>10-11</th>
+            <th>11-12</th>
+        </tr>
+
+        <tr>
+            <td>Mon</td>
+            <td>Maths</td>
+            <td>HTML</td>
+            <!-- rowspan="2": merges two rows (Mon and Tue) -->
+            <td rowspan="2">Web Lab</td>
+        </tr>
+
+        <tr>
+            <td>Tue</td>
+            <td>DBMS</td>
+            <td>OS</td>
+            <!-- No 4th cell here: covered by Web Lab rowspan above -->
+        </tr>
+
+        <tr>
+            <td>Wed</td>
+            <!-- colspan="3": merges three columns -->
+            <td colspan="3">Seminar</td>
+        </tr>
+
+    </table>
+    </body>
 </html>
+   
